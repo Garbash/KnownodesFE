@@ -1,0 +1,215 @@
+// I gather this file is a starting point for the project.
+@import 'partials/base';
+
+body {
+  font-family: arial;
+}
+p.body, .resourceType {
+  color: $body-c;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.page {
+  //this acts as the container for the entire grid
+  @include container;
+
+  //
+
+  .column1{ @include span-columns(12,24);
+    div.knownode { @include span-columns(11,12);
+      border-radius: 7px;
+      border: 1px solid $knownode-border-c;
+      padding: 13px;
+      padding-left: 5px;
+
+      .resource { @include span-columns(12, 12);
+        .map { @include span-columns(1, 12);
+          img.node{ float:right;}
+        }
+        div.content { @include span-columns(9 ,12);
+          background-color:$background-c;
+          padding:3px;
+          padding-bottom: 0px;
+          border-radius: 7px;
+          border: 0px solid $knownode-border-c;
+          border-right: 1px solid $knownode-border-c;
+          h5.title {
+            color: $title-c;
+            margin-top: 0px;
+            padding-top: 0px;
+          }
+
+          img {
+            vertical-align: bottom;
+          }
+          .knowledgeDomain, .resourceType{
+            float:right;
+            margin-top: 0px;
+            padding-top: 0px;
+          }
+          .knowledgeDomain {
+            @include invertedBox($biology-c);
+          }
+
+
+
+        }
+        .buttons { @include span-columns(1 omega, 12);
+          img.add {
+            float:left;}
+        }
+
+      }
+      .connection {
+        .map { @include span-columns(2,24);
+          img{ float:right;}
+        }
+        div.filler { @include span-columns(1, 24);}
+        div.content { @include span-columns(16 ,24);
+          padding:3px;
+          border-radius: 7px;
+          border: 0px solid $border-connection-c;
+          border-left: 1px solid $border-connection-c;
+          border-right: 1px solid $border-connection-c;
+          h5.title {
+            color: $title-c;
+            margin-top: 0px;
+            padding-top: 0px;
+          }
+
+          .tagLine {
+            .connectionType {
+              @include invertedBox($opposed-c);
+            }
+
+            .infoLine {float:left;
+              margin-top: 3px;
+              padding-top: 0px;
+              font-style:italic;
+              font-size: 0.75em;
+            }
+          }
+        }
+        .buttons{ @include span-columns(2 omega, 24);}
+      }
+    }
+  }
+
+  .column2{ @include span-columns(12 omega,24);
+    @extend .column1;
+  }
+
+  .header {
+    height: 32px;
+    img#logo {
+      width:150px;
+      right: 40%;
+      position:absolute;
+      margin-left: 400px;
+    }
+
+    img#github{
+      width:50px;
+      position:absolute;
+      display: block;
+      top: 0px;
+      left: 0%;
+      margin-right: 20px;
+
+    }
+    .info {
+      width: 150px;
+      float:right;
+      margin-top: 11px;
+
+    }
+    span.login {
+      width:50px;
+      float:left;
+      margin-left: 40px;
+      margin-top: 11px;
+    }
+  }
+
+}
+
+.lineSeperator{
+  margin: 0px;
+  vertical-align: top;
+  height:1px;
+  background: #CBCBCD;
+  border-bottom:1px solid rgba(173, 174, 177, 0.29);
+}
+
+@include layout(12) {
+  .addConnection {
+    @include container;
+    @include push(6);
+    //@include susy-grid-background;
+
+    position:fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+
+
+    .button {
+      border-radius: 7px;
+      border: 0px solid white;
+      float:left;
+      background: white;
+    }
+  }
+    div.inputMenu { @include span-columns(12,12);
+      padding: 20px;
+      background:white;
+      border: 5px, solid $knownode-border-c;
+
+
+
+      .resource { @include span-columns(12, 12);
+        .map { @include span-columns(1, 12);
+          img.node{ float:right;}
+        }
+        div.content { @include span-columns(10 ,12);
+          background-color:$background-c;
+          padding:3px;
+          padding-bottom: 0px;
+          border-radius: 7px;
+          border: 0px solid $knownode-border-c;
+          border-right: 1px solid $knownode-border-c;
+          h5.title {
+            color: $title-c;
+            margin-top: 0px;
+            padding-top: 0px;
+          }
+
+          img {
+            vertical-align:middle;
+          }
+          .knowledgeDomain, .resourceType{
+            float:left;
+            margin-top: 0px;
+            padding-top: 0px;
+          }
+          .domainMenu div {
+            color:blue;
+            z-index:1000;
+          }
+
+        }
+      .connection {@include span-columns(2,24);}
+    }
+
+  }
+  }
+
+
+
+
+
+
+
+
+

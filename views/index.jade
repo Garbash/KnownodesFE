@@ -1,0 +1,31 @@
+extends layout
+block content
+
+
+
+
+    div.header.row
+      include includes/header
+
+    div.headerLine.row
+      div.line.span24
+
+    div.subheader.row
+      div.span23.offset1
+        h3.subheader Showing connections around:&nbsp;
+          span
+            a(href="http://www.pnas.org/content/early/2010/02/04/0915161107")
+              h3.mainSubject The Lucretian swerve: The biological bases of human behavoir and the criminal justice system
+      div.column1.span12
+        include includes/knownode
+        p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        include includes/knownode
+      div.column2.span12.offset1
+        include includes/knownode
+        p &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        include includes/knownode
+
+    include includes/addConnection
+
+
+

@@ -1,0 +1,33 @@
+// Here is where you can define your constants for your application and to configure the blueprint framework.
+// Feel free to delete these if you want keep the defaults:
+@import 'compass';
+@import 'susy';
+
+$total-columns  : 24;             // a 12-column grid
+$column-width   : 4em;            // each column is 4em wide
+$gutter-width   : 1em;            // 1em gutters between columns
+$grid-padding   : $gutter-width;  // grid-padding equal to gutters
+
+//colors
+
+$title-c: #59688B;
+$background-c: #F7F7F8;
+$body-c: #717577;
+$knownode-border-c: #CECFD1;
+$opposed-c: #DF1F25;
+$opposed-font-c: white;
+$biology-c: #62A265;
+$border-connection-c: #808B99;
+//mixins
+
+@mixin invertedBox($box-color) {
+  padding: 2px;
+  float:right;
+  margin-top: 0px;
+  font-size: 0.75em;
+  color: $opposed-font-c;
+  background-color: $box-color;
+  border: solid 1px $box-color;
+  border-radius: 3px;
+}
+

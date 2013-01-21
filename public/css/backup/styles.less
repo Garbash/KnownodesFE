@@ -1,0 +1,176 @@
+@title-c: #59688B;
+@background-c: #F7F7F8;
+@body-c: #717577;
+@knownode-border-c: #CECFD1;
+@opposed-c: #DF1F25;
+@opposed-font-c: white;
+@biology-c: #62A265;
+@border-connection-c: #808B99;
+@moving-edge: #B0B3B3;
+@create-node-c : #BFBFBF;
+@create-node-backg-c :#F6F6F6;
+//mixins
+
+
+
+h3.subheader{
+  margin-top: 0px;
+}
+.movingEdge{
+
+  background:transparent url('/img/lineGrey.png') repeat-y 10px 0;
+  background-position:10px 20px;
+
+
+}
+
+body a {
+  font-size: 14;
+}
+.invertedBox(@box-color) {
+  float:right;
+  margin-top: 0px;
+  padding-left:5px;
+  padding-right:5px;
+  color: @opposed-font-c;
+  background-color: @box-color;
+  border: solid 1px @box-color;
+  border-radius: 3px;
+}
+
+  div#logo {
+    float:left;
+    left:50px;
+  }
+  img#logo {
+    width:150px;
+  }
+
+img#github{
+  width:40px;
+  position:absolute;
+  display: block;
+  top: 0px;
+  right: 0%;
+}
+span.login {
+  width:50px;
+  float:left;
+  margin-left: 40px;
+  margin-top: 11px;
+}
+
+.info {
+  width: 150px;
+  float: left;
+  margin-top: 11px;
+
+}
+
+.lineSeperator{
+  margin-bottom: 2px;
+  vertical-align: top;
+  height:1px;
+  background: #CBCBCD;
+  border-bottom:1px solid rgba(173, 174, 177, 0.29);
+  #headerLine {
+    margin:10px;
+  }
+}
+
+.headerLine{
+  margin:10px;
+  margin-bottom:5px;
+  vertical-align: top;
+  height:1px;
+  background: #CBCBCD;
+  border-bottom:1px solid rgba(173, 174, 177, 0.29);
+
+}
+
+
+  div.knownode {
+    border: 1px solid @knownode-border-c;
+    padding:10px;
+    margin-left:5px;
+    border-radius: 15px;
+
+    .resource {
+      .map {
+        margin-top:4px;
+      }
+      div.content {
+        background-color:@background-c;
+        padding:8px;
+        padding-bottom: 0px;
+        border-radius: 7px;
+        border: 0px solid @knownode-border-c;
+        border-right: 1px solid @knownode-border-c;
+        h5.title {
+          color: @title-c;
+          margin-top: 0px;
+          padding-top: 0px;
+        }
+
+        img {
+          vertical-align: bottom;
+        }
+        .knowledgeDomain, .resourceType{
+          float:right;
+          margin-top: 0px;
+          padding-top: 0px;
+        }
+        .knowledgeDomain {
+          .invertedBox(@biology-c);
+          //background:@biology-c;
+          //color:white;
+
+        }
+
+      }
+
+    }
+    .connection {
+      .map {
+        img{ float:right;}
+      }
+      div.content {
+        padding:8px;
+        border-radius: 7px;
+        border: 0px solid @border-connection-c;
+        border-left: 1px solid @border-connection-c;
+        border-right: 1px solid @border-connection-c;
+        h5.title {
+          color: @title-c;
+          margin-top: 0px;
+          padding-top: 0px;
+        }
+
+        .tagLine {
+          .connectionType {
+          .invertedBox(@opposed-c);
+          }
+
+          .infoLine {float:left;
+            margin-top: 3px;
+            padding-top: 0px;
+            font-style:italic;
+            font-size: 0.75em;
+          }
+        }
+      }
+      .buttons{ }
+    }
+  }
+
+.add {
+  float:left;
+}
+
+.addConnection{
+  position:fixed;
+  bottom: 10px;
+  .inputMenu{background:white;
+    border: 1px solid @border-connection-c;}
+  button{width:200px;}
+}

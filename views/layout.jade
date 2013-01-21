@@ -1,0 +1,31 @@
+doctype 5
+html(ng-app)
+  head
+    meta(charset='utf8')
+    base(href='/')
+    link(rel='stylesheet', href='css/bootstrap.css')
+    link(rel='stylesheet/less', href='css/styles.less')
+    script(src="js/switchButton.js")
+    script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js")
+    script(src="http://code.jquery.com/jquery-latest.js")
+    script(src="js/bootstrap.js")
+    script
+      less = {
+      env: "development", // or "production"
+      async: false,       // load imports async
+      fileAsync: false,   // load imports async when in a page under
+      // a file protocol
+      poll: 1000,         // when in watch mode, time in ms between polls
+      functions: {},      // user functions, keyed by name
+      dumpLineNumbers: "comments", // or "mediaQuery" or "all"
+      relativeUrls: false,// whether to adjust url's to be relative
+                          // if false, url's are already relative to the
+                          // entry less file
+      rootpath: ":/a.com/"// a path to add on to the start of every url
+                          //resource
+      };
+
+    script(src="js/less-1.3.3.min.js")
+    title knownodes
+  body
+    block content
