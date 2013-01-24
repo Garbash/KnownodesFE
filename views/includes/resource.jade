@@ -8,13 +8,13 @@ div.resource.row
   .map.span1
     img(src="/img/node.png").node
   div.content.span10
-    a.title The Lucretian swerve: The biological bases of human behavoir and the criminal justice system{post1.title}
-      a(href="{post.url}")
+    a.title {{node.title}}
+      a(href="{{node.url}}")
         img(src="/img/openInNewWindow.png", width="18px")
     div.lineSeperator
     p.body
       span
-        small It is widely believed, at least in scientific circles, that living systems, including mankind, obey the natural physical laws...
+        small {{node.body}}
     p.tagLine
       p.knowledgeDomain
         small Biology
