@@ -6,7 +6,8 @@ html(ng-app)
     link(rel='stylesheet', href='css/bootstrap.css')
     link(rel='stylesheet/less', href='css/styles.less')
     script(src="js/switchButton.js")
-    script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js")
+    script(src="js/angular.js")
+    script(src="js/controller.js")
     script(src="http://code.jquery.com/jquery-latest.js")
     script(src="js/bootstrap.js")
     script
@@ -27,5 +28,5 @@ html(ng-app)
 
     script(src="js/less-1.3.3.min.js")
     title knownodes
-  body
+  body(ng-controller:"NodeListCtrl")
     block content
